@@ -1,5 +1,6 @@
 import React from 'react';
-import './App.css';
+
+import './index.css'
 import Landingpage from './components/Landingpage';
 import Service from './components/Service';
 import Team from './components/Team';

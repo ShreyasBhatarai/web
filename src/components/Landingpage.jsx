@@ -1,37 +1,8 @@
 import React from "react";
-
+import '../output.css'
+import '../App.css'
 
 export default function Landingpage(){
-    
-    const btnHumb = document.querySelector("[data-toggle-navbar]")
-    const navbar = document.querySelector("[data-navbar]")
-    const overlay = document.querySelector("[data-nav-overlay]")
-    if (btnHumb && navbar) {
-        const toggleBtnAttr = () => {
-            const isOpen = btnHumb.getAttribute("data-is-open")
-            btnHumb.setAttribute("data-is-open", isOpen === "true" ? "false" : "true")
-            if (isOpen === "false") {
-                overlay.classList.toggle("hidden")
-            } else {
-                overlay.classList.add("hidden")
-            }
-        }
-        btnHumb.addEventListener("click", () => {
-            navbar.classList.toggle("invisible")
-            navbar.classList.toggle("opacity-0")
-            navbar.classList.toggle("translate-y-10")
-            toggleBtnAttr()
-        })
-    
-        overlay.addEventListener("click", () => {
-            navbar.classList.add("invisible")
-            navbar.classList.add("opacity-0")
-            navbar.classList.add("translate-y-10")
-            toggleBtnAttr()
-        })
-    }
-
-
     return(
         <>
 
@@ -59,7 +30,7 @@ export default function Landingpage(){
             </p>
             <div class="mt-10  w-full flex max-w-md mx-auto lg:mx-0">
                 <div class="flex sm:flex-row flex-col gap-5 w-full">
-                    <form action="/"
+                    <form
                         class="py-1 pl-6 w-full pr-1 flex gap-3 items-center text-gray-600 shadow-lg shadow-gray-200/20
                             border border-gray-200 bg-gray-100 rounded-full ease-linear focus-within:bg-white  focus-within:border-blue-600">
                         <span class="min-w-max pr-2 border-r border-gray-200">
@@ -72,7 +43,7 @@ export default function Landingpage(){
                         <input type="email" name="" id="" placeholder="johndoe@gmail.com"
                             class="w-full py-7 outline-none bg-transparent"/>
                         <button class="flex text-white justify-center items-center w-max min-w-max sm:w-max px-6 h-12 rounded-full outline-none relative overflow-hidden border duration-300 ease-linear
-                                after:absolute after:inset-x-0 after:aspect-square after:scale-0 after:opacity-70 after:origin-center after:duration-300 after:ease-linear after:rounded-full after:top-0 after:left-0 after:bg-[/172554] hover:after:opacity-100 hover:after:scale-[2.5] bg-blue-600 border-transparent hover:border-[/172554]">
+                                after:absolute after:inset-x-0 after:aspect-square after:scale-0 after:opacity-70 after:origin-center after:duration-300 after:ease-linear after:rounded-full after:top-0 after:left-0 after:bg-[#172554] hover:after:opacity-100 hover:after:scale-[2.5] bg-blue-600 border-transparent  hover:border-[#172554]">
                             <span class="hidden sm:flex relative z-[5]">
                                 Get Started
                             </span>
